@@ -1,0 +1,323 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+body{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+header{
+    display: flex;            
+    align-items: center;       
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    top: 0;
+    background-color: #000000;
+    padding: 0 5vw;
+    z-index: 1000;
+}
+.flip-logo{
+    position: relative;
+    transform-style: preserve-3d;
+    animation: flip 10s infinite;
+}
+@keyframes flip{
+    0%, 20%{
+        transform: translateY(-10px);
+    }
+    33%, 53%{
+        transform: translateY(-77px);
+    }
+    66%, 86%{
+        transform: translateY(-140px);
+    }
+    100%{
+        transform: translateY(-10px);
+    }
+}
+.box-flip{
+    height: 50px;
+    width: 240px;
+    overflow: hidden;
+}
+.flip{
+    display: flex;
+    align-items: center;
+    font-size: 2.3rem;
+    font-family: Pacifico;
+    font-weight: bolder;
+    padding: 10px 0vw;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    margin-left: 20vw;
+    gap: 40px;
+}
+nav a{
+    display: inline-block;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+nav a:hover{
+    color: #ff0000;
+    transform: scale(1.2);
+}
+section{
+    scroll-margin-top: 65px;
+}
+.painel{
+    min-height: 100vh;
+}
+.enfeite{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 72px;
+    background-color: #ff0000;
+    box-shadow: 0px  0px 50px 1px #ff0000;
+}
+.banner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 8rem 5vw;
+}
+.introducao{
+    max-width: 600px ;
+}
+.titulo{
+    margin-top: 0vh;
+    display: flex;
+    margin: 0;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 500px ;}
+.introducao .titulo h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(2rem, 3vw, 3.2rem);
+}
+.introducao .titulo span{
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(2rem, 3vw, 3.2rem);
+    color: #ff0000;
+}
+.introducao .titulo p{
+    margin-top: 10px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: clamp(1rem, 1vw, 1.35rem);
+    line-height: 1.6;
+    max-width: 60ch;
+}
+.funcoes{
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 3rem;
+}
+.funcoes a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: none;
+    border: 0.13rem solid #ff0000;
+    border-radius: 10px;
+    gap: 1rem;
+    width: 175px;
+    height: 35px;
+    transition: 0.7s ease;
+}
+.funcoes a:hover{
+    background-color: #ff0000;
+    transform: scale(1.1);
+}
+.banner .perfil img{
+    transition: 0.4s ease;
+}
+.banner .perfil img:hover{
+    transform: scale(1.2);
+}
+#SobreMim {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+}
+#SobreMim .informacoes{
+    padding: 4rem 2vw;
+    flex-direction: column;
+    width: 80vw;
+}
+#SobreMim .informacoes h2{
+    display: flex;
+    justify-content: center;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+}
+#SobreMim .informacoes p{
+    padding: 2rem;
+    text-align: center;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
+#SobreMim .habilidades .habilidade{
+    display: flex;
+    flex-direction: row;
+    gap: 3vw;
+}
+#SobreMim .container-habilidades{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}    
+#SobreMim .container-habilidades h2{
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    padding: 5rem;
+}
+#SobreMim .habilidades .habilidade .box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 4.6rem 2vw;
+    width: 150px;
+    height: 100px;
+    box-shadow: 0 8px 20px 2px rgb(255, 0, 0);
+    transition: 0.6s ease;
+    animation: pulse 3s infinite;
+}
+
+#SobreMim .habilidades .habilidade .box:hover{
+    transform: scale(1.2);
+}
+#SobreMim .habilidades .habilidade img{
+    padding: 1rem;
+}
+#Projetos {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    margin: 0;
+    padding: 6rem 5vw;
+}
+#Projetos .container{   
+    background-color: rgba( 0, 0, 0, 0.01);
+    margin: 0 auto;
+    max-width: 1800px;
+
+}
+#Projetos .container .titulo{
+    display: flex;
+    gap: 0;
+    margin: 0;
+    font-size: 2rem;
+}    
+#Projetos .container .projetos{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 4rem;
+    background-color: rgba(0, 0, 0, 0.01);
+    margin: 5vh;
+    width: 85vw;
+}
+#Projetos .container .projetos .projeto{
+    position: relative;
+    gap: 1vh;
+    width: 100%;
+    height: auto;
+    transition: 0.5s ease;
+}
+#Projetos .container .projetos img {
+    width: 100%;
+    display: block;
+}
+#Projetos .container .projeto:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 30px 10px rgb(255, 0, 0);
+}
+#Projetos .container .projeto .overlay{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(3.5px);
+}
+#Projetos .container .projeto .overlay .loader{
+    width: 50px;
+    height: 50px;
+    border: 5px solid #ffffff40;
+    border-top: 5px solid rgb(255, 0, 0);
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+}
+@keyframes spin {
+    to{
+        transform: rotate(360deg);
+    }
+}
+.rodape{
+    padding: 6rem 5vw 3rem;
+}
+.contatos{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+}
+.contatos h2{
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    margin-top: 2.8vh;
+    margin-bottom: 13vh;
+}
+.icons{
+    display: flex;  
+    justify-items: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+.icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+.icons .icon:hover{
+    transform: scale(1.3);
+    text-shadow: 0px 1.8px 2px  #ff0000;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 0.4rem;
+}
+.direitos{
+    display: flex;
+    justify-content: center;
+    font-size: 0.8rem;
+    margin-top: 6rem;
+}
